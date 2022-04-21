@@ -1,0 +1,116 @@
+*, *::after, *::before { /*usando as propiedades antes e depois*/
+
+    box-sizing: border-box;/*fazendo o reset das bordas*/
+    font-family: Arial, Helvetica, sans-serif;/*colocando uma fonte*/
+
+}
+
+body{ /*modificando o conteudo da tag body*/
+
+    /*colocando uma cor de fundo um degrade*/
+    background: radial-gradient(circle, rgba(238,174,238,1) 0%, rgba(148,186,233,1) 100%);
+    display: flex;/*informando que os itens tem que ser flexiveis 'responsivo'*/
+    justify-content: center;/*justificando conteudo ao centro*/
+    align-items: center;/*alinhando os itens ao centro*/
+    min-height: 100vh;/*altura minima*/
+    overflow: hidden;/*informando que o conteudo vai ser sobreposto*/
+
+}
+
+.relogio{ /*moficando a div do relogio*/
+
+    width: 400px;/*alterando a largura do elemento*/
+    height: 400px;/*determinandoa altura do elemento*/
+    background-color: whitesmoke;/*colocando a cor de fundo*/
+    border-radius: 50%;/*colocando borda arredondada*/
+    border: 3px solid black;/*determinando tamanho e cor da borda*/
+    position: relative;/*determinando a posicao*/
+
+}
+
+.relogio .numero { /*modificando a div numero*/
+
+    --rotation: 0;/*determinado uma rotacao 'que os itens fique em circulo'*/
+    position: absolute;/*determinando que a posicao vai ser sempre essa*/
+    width: 100%;/*largura de 100 porque vai ser diacordo com tamanho da div relogio*/
+    height: 100%;/*altura de 100 porque vai ser diacordo com tamanho da div relogio*/
+    text-align: center;/*alinha text/numeros ao centro*/
+    font-size: 1.7rem;/*determinando a altura da fonte 'letra/numero'*/
+    transform: rotate(var(--rotation));/*declarando vareavel rotation*/
+
+}
+
+    /*pegando os numero do relogio e determinando o grau de inclinacao*/
+
+.relogio .n1 { --rotation: 30deg; /*determinando o grau de inclinacao do elemento*/}
+.relogio .n2 { --rotation: 60deg; /*determinando o grau de inclinacao do elemento*/}
+.relogio .n3 { --rotation: 90deg; /*determinando o grau de inclinacao do elemento*/}
+.relogio .n4 { --rotation: 120deg; /*determinando o grau de inclinacao do elemento*/}
+.relogio .n5 { --rotation: 150deg; /*determinando o grau de inclinacao do elemento*/}
+.relogio .n6 { --rotation: 180deg; /*determinando o grau de inclinacao do elemento*/}
+.relogio .n7 { --rotation: 210deg; /*determinando o grau de inclinacao do elemento*/}
+.relogio .n8 { --rotation: 240deg; /*determinando o grau de inclinacao do elemento*/}
+.relogio .n9 { --rotation: 270deg; /*determinando o grau de inclinacao do elemento*/}
+.relogio .n10 { --rotation: 300deg; /*determinando o grau de inclinacao do elemento*/}
+.relogio .n11 { --rotation: 330deg; /*determinando o grau de inclinacao do elemento*/}
+
+   /*nao possui o 12 porque o 12 ja esta na  posicao certa*/
+
+.relogio .tempo{ /*pegando a div tempo*/
+
+    --rotation:0;/*indicando rotacao 0*/ 
+    position: absolute;/*indicando que a posicao vai ser sempre essa*/
+    bottom: 50%;
+    left: 50%;
+    border: 1px solid #fff;/*determinando tamanho e cor da borda*/
+    border-top-left-radius: 10px ;/*determinando tamanho da borda na esquerda*/
+    border-top-right-radius: 10px ;/*determinando o tamanho da borda na direita*/
+    transform-origin: bottom;/*informando a origem da transformacao*/
+    z-index: 10;
+    
+    /**pegando a vareavel --rotation e fazendo o calculo de transformacao dela*/
+    transform: translateX(-59%) rotate(calc(var(--rotation) * 1deg ));
+
+}
+
+.relogio::after {
+
+    content: '';
+    position: absolute;/*determinando que vai ser sempre essa*/
+    background-color: #000;
+    z-index: 11;
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+
+}
+
+/*fazendo o ponteiro de segundos*/
+.relogio .tempo.segundo{ 
+
+    width: 3px;/*largura*/
+    height: 40%;/*altura*/
+    background-color: red;/*cor do ponteiro*/
+
+}
+
+/*fazendo o ponteiro de minutos*/
+.relogio .tempo.minuto{ 
+
+    width: 8px;/*largura*/
+    height: 35%;/*altura*/
+    background-color: #000;/*cor do ponteiro*/
+
+}
+
+/*fazendo o ponteiro de horas*/
+.relogio .tempo.hora{ 
+
+    width: 12px;/*largura*/
+    height: 30%;/*altura*/
+    background-color: #000;/*cor do ponteiro*/
+
+}

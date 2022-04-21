@@ -1,0 +1,61 @@
+<!DOCTYPE html><!--determinando o tipo do documento-->
+
+<html lang="pt-br"><!--determinando o idioma utilizado-->
+
+<head><!--tag head 'cabeca'-->
+
+    <!--meta tags-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--titulo do sistema-->
+    <title>Relógio Analógico</title>
+
+    <!--linkando o arquivo css-->
+    <link rel="stylesheet" href="relogio.css">
+
+</head>
+
+<body><!--tag body 'corpo'-->
+
+    <!--essa div vai ficar com a estrutura do relogio-->
+    <div class="relogio">
+
+        <!--essa div vai ficar com ponteiro de horas-->
+        <div class="hora tempo" data-hour-hand></div>
+
+        <!--essa div vai ficar com ponteiro de minustos-->
+        <div class="minuto tempo" data-minute-hand></div>
+
+        <!--essa div vai ficar com ponteiro de segundos-->
+        <div class="segundo tempo" data-second-hand></div>
+
+        <!--numeros das horas do relogio-->
+        <div class=" numero n1 " >1</div>
+        <div class=" numero n2 " >2</div>
+        <div class=" numero n3 " >3</div>
+        <div class=" numero n4 " >4</div>
+        <div class=" numero n5 " >5</div>
+        <div class=" numero n6 " >6</div>
+        <div class=" numero n7 " >7</div>
+        <div class=" numero n8 " >8</div>
+        <div class=" numero n9 " >9</div>
+        <div class=" numero n10 " >10</div>
+        <div class=" numero n11 " >11</div>
+        <div class=" numero n12 " >12</div>
+
+    </div>
+
+     <!--linkando o arquivo js-->
+     <script src="relogio.js"></script>
+
+    <!--observacoes 
+    
+        sempre colocar o script do css dentro do head para que ele seja interpretado primeiro que js 
+        e colocar o js no final para que o js seja lido por ultimo e funcione corretamente 
+    
+    -->
+    
+</body>
+</html>
