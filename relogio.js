@@ -1,6 +1,7 @@
 
 //colocando um intervalo
-setInterval(setDate, 1000)
+setInterval(setDate, 1000)//explicao do que e setDate e current time no final do arquivo
+//criamos um intervalo e colocamos no objeto que criamos aqui o  setDate
 
 //criando constante pra pegar hora,minuto,segundo
 
@@ -17,7 +18,6 @@ const segundo = document.querySelector('[data-second-hand]');
 function setDate(){
 
     //Atencao == coloquei o nome das constantes em ingles para diferencir das constantes anteriores declaradas 
-    //currentDate e um funcao que pega a data de hoje minutos e segundos do navegador
 
     //data de hoje recebe nova data
     const currentDate = new Date();
@@ -51,3 +51,8 @@ function setRotation(element, rotationRatio) {
 
 //inciando a funcao setDate que  criamos
 setDate()
+
+//explicacoes
+
+//currentDate e um funcao que pega a data de hoje minutos e segundos do navegador
+//setDate e uma  funca do js que configura data hora minutos e segundos do navegador

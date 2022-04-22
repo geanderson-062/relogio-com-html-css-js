@@ -60,31 +60,32 @@ body{ /*modificando o conteudo da tag body*/
 
     --rotation:0;/*indicando rotacao 0*/ 
     position: absolute;/*indicando que a posicao vai ser sempre essa*/
-    bottom: 50%;
-    left: 50%;
+    bottom: 50%;/*determiando posicao vai ser modificada agora ou depois*/
+    left: 50%;/*indicando que o elemento vai ficar 50% a mais na esquerda*/
     border: 1px solid #fff;/*determinando tamanho e cor da borda*/
     border-top-left-radius: 10px ;/*determinando tamanho da borda na esquerda*/
     border-top-right-radius: 10px ;/*determinando o tamanho da borda na direita*/
     transform-origin: bottom;/*informando a origem da transformacao*/
-    z-index: 10;
+    z-index: 10;/*determinando uma sobre posicao encima de outros elementos*/
     
     /**pegando a vareavel --rotation e fazendo o calculo de transformacao dela*/
     transform: translateX(-59%) rotate(calc(var(--rotation) * 1deg ));
 
 }
 
+/*pegando os valores de antes que vao ser modificados*/
 .relogio::after {
 
-    content: '';
+    content: '';/*esta vazio porque vamos por com o js*/
     position: absolute;/*determinando que vai ser sempre essa*/
-    background-color: #000;
-    z-index: 11;
-    width: 15px;
-    height: 15px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
+    background-color: #000;/*determinado a cor*/
+    z-index: 11;/*colocando a sobreposicao emcima dos elementos*/
+    width: 15px;/*determinano a largura*/
+    height: 15px;/*determinando a altura*/
+    top: 50%;/*determinando que ele fique 50% acima*/
+    left: 50%;/*determinandoque elefique 50% a esquerda*/
+    transform: translate(-50%, -50%);/*determinando a transformafacao de -50% para os lados*/
+    border-radius: 50%;/*borda arredondada para nosso relogio ficar redondo*/
 
 }
 
