@@ -1,0 +1,48 @@
+﻿/* Seletor de ID */
+#relogioContainer { /*aqui passamos o ofrmato e atributos de relogio*/
+	position: relative;/*posicao relativa ao tamanho da tela*/
+	margin: auto;/*margens determinadas de forma automatica*/
+	height: 40vw;/*altura*/
+	/* para tornar a altura e a largura responsivas */
+	width: 40vw;/*largura*/
+	background: url(img/relogiomanso.jpeg) no-repeat;/*colocando a imagem no relogio e informandoque ela nao seja repetida*/
+	/* definindo nossa imagem de fundo */
+	background-size: 100%;/*determinando que esses atributos fiquem 100% do espaco dessa div*/
+}
+
+/* pegando as id das div no html*/
+#hora,
+#minuto,
+#segundo {
+	position: absolute;/*determinado que essa posicao vai sempre usada*/
+	background: black;/*determinando a cor*/
+	border-radius: 10px;/*colocando uma borda arredondada*/
+	transform-origin: bottom;/*origen de transformacao o botton*/
+}
+
+/* atributos do ponteiro */
+#hora {
+	width: 1.8%;/*largura*/
+	height: 25%;/*altura*/
+	top: 25%;/*topo*/
+	left: 48.85%;/*posicionamento a esquerda*/
+	opacity: 0.8;/*opacidade*/
+}
+
+/* atributos do ponteiro */
+#minuto {
+	width: 1.6%;/*largura*/
+	height: 30%;/*altura*/
+	top: 19%;/*topo*/
+	left: 48.9%;/*posicionamento a esquerda*/
+	opacity: 0.8;/*opacidade*/
+}
+
+/* atributos do ponteiro */
+#segundo {
+	width: 1%;/*largura*/
+	height: 40%;/*altura*/
+	top: 9%;/*topo*/
+	left: 49.25%;/*posicionamento a esquerda*/
+	opacity: 0.8;/*opacidade*/
+}
